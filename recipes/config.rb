@@ -25,7 +25,8 @@
   node['aerospike']['smd_dir'],
   node['aerospike']['config']['mod-lua']['user-path'],
   node['aerospike']['config']['mod-lua']['system-path'],
-  node['aerospike']['config']['service']['work-directory']
+  node['aerospike']['config']['service']['work-directory'],
+  node['aerospike']['amc']['conf_dir']
 ].uniq.each do |d|
   directory d do
     owner node['aerospike']['user']
