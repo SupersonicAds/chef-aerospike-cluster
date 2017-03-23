@@ -1,3 +1,6 @@
+default['aerospike'] = {}
+default['aerospike']['version'] = {}
+
 default['aerospike']['version']['server'] = '3.10.1.1'
 default['aerospike']['version']['tools'] = '3.10.2'
 default['aerospike']['version']['amc'] = '3.6.13'
