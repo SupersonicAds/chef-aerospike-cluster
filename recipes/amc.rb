@@ -17,6 +17,18 @@
 # limitations under the License.
 #
 
+[
+  node['aerospike']['amc']['conf_dir'],
+  node['aerospike']['amc']['log_dir']
+].uniq.each do |d|
+  directory d do
+    owner node['aerospike']['user']
+    group node['aerospike']['group']
+    mode node['aerospike']['mode']
+    recursive true
+  end
+end
+
 package_suffix = value_for_platform_family(
   'rhel' => '-el5',
   'debian' => '.all'
