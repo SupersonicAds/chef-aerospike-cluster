@@ -32,7 +32,7 @@ when 'mesh'
     nodes = search(:node, node['aerospike']['chef']['search'].to_s)
 
     nodes.sort_by! { |n| n['ipaddress'] }
-    nodes.map! { |n| "#{n['ipaddress']} #{n['aerospike']['config']['network']['heartbeat']['port']}" }
+    nodes.map! { |n| "#{n['ipaddress']} #{node['aerospike']['config']['network']['heartbeat']['port']}" }
 
     node.default['aerospike']['config']['network']['heartbeat']['mesh-seed-address-port'] = nodes
   end
