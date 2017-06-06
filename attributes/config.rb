@@ -25,6 +25,7 @@ default['aerospike']['config']['network']['service']['port'] = 3000
 default['aerospike']['config']['network']['heartbeat']['mode'] = 'mesh'
 default['aerospike']['config']['network']['heartbeat']['interval'] = 150
 default['aerospike']['config']['network']['heartbeat']['timeout'] = 10
+default['aerospike']['config']['network']['heartbeat']['port'] = 3002
 
 # fabric {}
 default['aerospike']['config']['network']['fabric']['port'] = 3001
