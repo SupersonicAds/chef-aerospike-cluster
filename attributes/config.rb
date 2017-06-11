@@ -5,7 +5,7 @@ default['aerospike']['config_attribute'] = 'config'
 default['aerospike']['config']['xdr'] = {}
 
 # cluster {}
-default['aerospike']['config']['cluster'] = {}
+# default['aerospike']['config']['cluster'] = {}
 
 # service {}
 default['aerospike']['config']['service']['user'] = 'root'
